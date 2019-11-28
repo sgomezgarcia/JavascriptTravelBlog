@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <!-- sirve para optimizar los sitios para móviles, esta etiqueta ayuda a definir el ancho, alto y escala del área usada por el navegador para mostrar contenido -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="Emilio Valdivia"/>
+  <meta name="description" content="Blog de viajes por todo el mundo, las mejores ciudades para viajar"/>
+  <meta name="keywords" content="viajar,viajes,travel,londres,mallorca"/>
+  <title>Blog de Viajes</title>
+  <!-- Uso de normalize.css para resetear los estilos por defecto de las etiquetas html -->
+  <link rel="stylesheet" href="css/normalize.css"/>
+  <link rel="stylesheet" href="css/estilos.css"/>
+
+</head>
+<body>
+
+  <!-- Cabecera -->
+  <header class="site-header contenedor">
+    <img src="img/logo.png" alt="logotipo">
+  </header>
+
+  <!-- Menu de navegación -->
+  <div class="contenedor-nav">
+    <nav id="nav" class="navegacion-principal contenedor">
+      <a href="#">Inicio</a>
+      <a href="#">Nosotros</a>
+      <a href="#">Blog</a>
+      <a href="#">Tienda</a>
+      <a href="#">Contacto</a>
+    </nav>
+  </div>
+
+  <!-- Contenedor principal -->
+  <div class="contenedor clearfix">
+    <main class="contenido-principal" id="main"></main>
+
+    <!-- Barra lateral -->
+    <aside class="sidebar">
+      <section class="otras-entradas">
+        <h2>Otros Posts</h2>
+        <ul>
+          <li><a href="#">Entrada 1</a></li>
+          <li><a href="#">Entrada 2</a></li>
+          <li><a href="#">Entrada 3</a></li>
+          <li><a href="#">Entrada 4</a></li>
+        </ul>
+      </section>
+      <section id="entradas-favoritas">
+        <h2>Entradas favoritas</h2>
+        <div class="favorite" id="favContent"></div>
+      </section>
+    </aside>
+  </div><!--.contenedor-->
+
+  <footer class="footer-sitio">
+    <div class="contenedor clearfix">
+      <section class="nosotros">
+        <h2>Sobre Nosotros</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+      </section>
+      <section class="menu">
+        <h2>Webs amigas</h2>
+        <nav class="web-amigas">
+          <a href="#">Excursiones premium</a>
+          <a href="#">Circuitos únicos</a>
+          <a href="#">Cruceríssimo</a>
+          <a href="#">TodoViaje</a>
+        </nav>
+      </section>
+    </div>
+    <p class="copyright">BlogdeViajes - Todos los derechos Reservados 2019 &copy;</p>
+  </footer>
+  <script type="text/javascript" src="./index.js"></script>
+  <script type="text/javascript">
+      getPostsList();
+  </script>
+</body>
+</html>

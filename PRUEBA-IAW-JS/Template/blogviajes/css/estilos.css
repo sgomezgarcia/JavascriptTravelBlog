@@ -1,0 +1,223 @@
+
+/* estilos generales */
+/******************************************/
+/* Selector universal: afecta a todos los elementos*/
+* {
+    /* El grosor de los bordes i el espacio de los padding se incluyen en el tamaño total de la caja */
+    box-sizing: border-box;
+}
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/* contenedor para centrar el contenido  */
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/* Clase axuliar que evita que se solapen las capas cuando se utiliza la
+propiedad float */
+.clearfix::after {
+    content:'';
+    clear: both;
+    display: block;
+}
+/* Imágenes responsive */
+img {
+    max-width: 100%;
+}
+/* Estilos mínimos para todos los párrafos de la web*/
+p {
+    font-size: 16px;
+    line-height: 2;
+}
+
+/* Encabezado */
+/******************************************/
+.site-header {
+    padding: 20px 0;
+}
+
+/* Navegación */
+/******************************************/
+.contenedor-nav {
+    margin-top: 40px;
+    background-color: #DB008D;
+}
+.navegacion-principal a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 22px;
+    display: block;
+    text-align: center;
+    padding: 20px;
+}
+.navegacion-principal a:hover {
+    background-color: #00B8E4;
+}
+/* Con este media query cuando la densidad de pí­xeles sea mayor de 768px se verá
+  los enlaces de la navegación en horizontal
+*/
+@media (min-width:768px){
+    .navegacion-principal a{
+        display: inline-block;
+    }
+}
+
+/* Contendio central */
+/******************************************/
+
+  /* Contenedor Principal */
+  /******************************************/
+.contenido-principal{
+    margin-top: 40px;
+}
+.contenido-principal, .sidebar {
+    padding: 20px;
+}
+/* Con este media query cuando la densidad de pí­xeles sea mayor de 768px se mostrará
+  el contenido central alineado a la izquierda i la barra lateral de enlaces
+  de entradas hacia la derecha
+*/
+@media (min-width:768px){
+    .contenido-principal {
+        width: 70%;
+        float: left;
+        padding: 0 60px 0 0;
+    }
+    .sidebar{
+        width: 30%;
+        float: right;
+        padding:0;
+        margin-top: 40px;
+    }
+}
+
+  /* Entradas de Blog */
+  /******************************************/
+.entrada h2 {
+    color: #00B8E4;
+    margin-bottom: 20px;
+}
+.entrada {
+    margin-bottom: 60px;
+}
+.entrada .favorite {
+    display: inline-block;
+    width: 32px;
+    cursor: pointer;
+}
+.entrada:last-of-type{
+    margin-bottom: 0;
+}
+/* Por defecto queremos que la imagen se muestre como un bloque ocupando todo el
+espacio disponible en la pantalla */
+.entrada img {
+    display: block;
+}
+.entrada p {
+    text-align: justify;
+}
+.entrada .boton {
+    background-color: #00B8E4;
+    padding: 10px 60px;
+    display: inline-block;
+    margin-top: 10px;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 18px;
+    /* Propiedad avanzada para animación de elementos*/
+    transition: background-color .3s ease-in-out;
+}
+.entrada .boton:hover {
+    background-color: rgb(0, 131, 164);
+}
+@media (min-width: 480px){
+  /* Con este media query cuando la densidad de pí­xeles sea mayor de 480px
+  la imagen se mostrará a la izquierda del texto de la entrada.
+  */
+    .entrada img {
+        width: 300px;
+        float:left;
+        margin: 0 30px 0 0;
+    }
+}
+
+
+/* Barra lateral */
+/******************************************/
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+.sidebar ul li {
+    padding: 10px;
+}
+.sidebar ul li:hover {
+    background-color: #00B8E4;
+}
+.sidebar ul li a {
+    color: #00B8E4;
+    font-size: 18px;
+    text-decoration: none;
+}
+.sidebar ul li:hover a {
+    color: #ffffff;
+}
+.sidebar h3 {
+    color: #db008d;
+}
+
+/* Pie de página */
+/********************************************/
+.footer-sitio {
+    background-color: #DB008D;
+    padding-top: 40px;
+    margin-top: 60px;
+    color: #ffffff;
+    text-align: center;
+}
+.footer-sitio h2 {
+    color: #ffffff;
+}
+.footer-sitio a {
+    color: #ffffff;
+    font-size: 22px;
+    margin-right: 20px;
+
+    display: block; /* propiedad a cambiar por media query */
+}
+.footer-sitio a:last-of-type{
+    margin-right: 0;
+}
+.footer-sitio .web-amigas a{
+    font-size: 16px;
+}
+.footer-sitio .web-amigas a:hover{
+    color: turquoise;
+}
+.copyright {
+    background-color:#;
+    margin: 50px 0 0 0;
+    padding: 20px 0;
+}
+
+@media (min-width:768px){
+  /* Con este media query cuando la densidad de pí­xeles sea mayor de 768px
+  el footer se separará en dos columnas
+  */
+    .web-amigas a {
+        display: inline-block;
+    }
+    .footer-sitio .nosotros {
+        float: left;
+        width: 30%;
+        text-align: left;
+    }
+    .footer-sitio .menu {
+        float: right;
+        width: 50%;
+        text-align: right;
+    }
+}
