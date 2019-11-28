@@ -16,7 +16,7 @@ printPostsList = (data) => {
   for (let post of data) {  // (let i=0; i < data.length; i++)
     content.innerHTML += `
     <article id="art-${post.id}" class="entrada">
-    <h2><img id="post-${post.id}" class="favorite" src="./img/favorite-off-icon-2.png" onclick="addFavoritePost('${post.id}', '${post.titol}', '${post.descripcio}')" alt="Seleccionar como post favorito" />
+    <h2><img id="post-${post.id}" class="favorite" src="img/favorite-off-icon-2.png" onclick="addFavoritePost('${post.id}', '${post.titol}', '${post.descripcio}')" alt="Seleccionar como post favorito" />
 				${post.titol}
 		</h2>
     <img src="${post.imagen}" />
