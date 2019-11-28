@@ -58,6 +58,7 @@ function toggleFavorite (entrada) {
   } else {
     favsEntradas.push(entrada);
   }
+  this.getPostsList();
   localStorage.setItem('favoritePostsList', JSON.stringify(favsEntradas));
 }
 
